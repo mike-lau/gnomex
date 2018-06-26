@@ -147,7 +147,7 @@
             </fileset>
         </copy>
 
-        <exec executable="cmd">
+        <exec executable="/bin/sh" os="Mac OS X">
             <arg value="Python"/>
             <arg value="${basedir}\scripts\add-opt-in.py"/>
             <arg value="${build.dir}\${flexapp.name}.${gnomex_version}.${gnomex_build}.swf"/>

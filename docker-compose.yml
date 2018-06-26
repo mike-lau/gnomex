@@ -1,0 +1,18 @@
+# This is a docker-compose file.
+# Refer to the syntax documentation at https://docs.docker.com/compose/compose-file/ for details
+
+version: '3.3'
+
+services:
+  db:
+
+    image: mysql:5.5.60
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - /var/lib/mysql
+    ports:
+
+      - 3306:3306
+## DB config ends, do not remove this comment ##
