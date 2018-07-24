@@ -1,5 +1,7 @@
 //version=5.36
 ext{
+    serverHome="/usr/local/Cellar/tomcat/7.0.62"
+    deployDir="/webapps"
     glAppName="gnomexlite"
     warName="${rootProject.name}.war"
     glWarName="${glAppName}.war"
