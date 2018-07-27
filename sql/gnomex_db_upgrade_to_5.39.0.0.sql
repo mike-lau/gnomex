@@ -49,8 +49,8 @@ VALUES ('SampleDetailsOrganism', '4', '', '<TEXTFORMAT LEADING="2"><P ALIGN="LEF
 INSERT INTO gnomex.PropertyDictionary (propertyName,propertyValue,propertyDescription, forServerOnly)
 VALUES ('billing_account_exp_email','N','Reminder email sent to out to labs for billing accounts to expire within the month','Y');
 
-ALTER TABLE BillingAccount
-ADD activeAccount char(1) not null default 'Y';
+-- ALTER TABLE BillingAccount
+-- ADD activeAccount char(1) not null default 'Y';
 
 INSERT INTO PropertyDictionary(propertyName, propertyValue, propertyDescription, forServerOnly, idCoreFacility)
 VALUES ('exclude_new_requests', 'N', 'Excludes requests from billing that are in the NEW category', 'N', NULL);
