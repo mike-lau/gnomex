@@ -240,18 +240,18 @@ public class PublicSaveSelfRegisteredAppUser extends GNomExCommand implements Se
         }
         coreFacilityEmail = facility.getContactEmail();
       }
-
-      if (this.isValid()) {
-        // Send user email before storing app user so if it fails we can give error without
-        // throwing exception
-        try {
-          sendUserEmail(appUserScreen, sess);
-        } catch (Exception e) {
-          LOG.error("An exception occurred sending the user email ", e);
-
-          this.addInvalidField("email", "Unable to send email.  Please check your email address and try again.");
-        }
-      }
+//
+//      if (this.isValid()) {
+//        // Send user email before storing app user so if it fails we can give error without
+//        // throwing exception
+//        try {
+//          sendUserEmail(appUserScreen, sess);
+//        } catch (Exception e) {
+//          LOG.error("An exception occurred sending the user email ", e);
+//
+//          this.addInvalidField("email", "Unable to send email.  Please check your email address and try again.");
+//        }
+//      }
 
       if (this.isValid()) {
         appUser = appUserScreen;
@@ -286,9 +286,9 @@ public class PublicSaveSelfRegisteredAppUser extends GNomExCommand implements Se
         sess.save(appUser);
       }
 
-      if (this.isValid()) {
-        sendAdminEmail(appUser, sess);
-      }
+//      if (this.isValid()) {
+//        sendAdminEmail(appUser, sess);
+//      }
 
       if (this.isValid()) {
         sess.flush();
